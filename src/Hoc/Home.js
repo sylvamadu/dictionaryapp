@@ -14,7 +14,6 @@ function Home() {
     const[isLoading, setIsLoading] = useState(true)
     const[suggestionList, setSuggestionList] = useState([])
   
-    let url;
     
 
     useEffect(()=>{
