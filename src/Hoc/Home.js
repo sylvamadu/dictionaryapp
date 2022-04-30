@@ -13,7 +13,9 @@ function Home() {
     const[randomList, setRandomList] = useState([])
     const[isLoading, setIsLoading] = useState(true)
     const[suggestionList, setSuggestionList] = useState([])
-    const[url, setUrl] = useState()
+  
+    let url;
+    
 
     useEffect(()=>{
         //fetch data from API
@@ -38,12 +40,10 @@ function Home() {
             axios.get(`https://api.datamuse.com/sug?s=${text}`)
             .then(response => {
                 setSuggestionList(response.data);
-                setUrl(response.data)
             })
             .catch(err => console.log(err.message));
         } 
         console.log(suggestionList)
-        console.log(url)
           
     }
  
@@ -73,6 +73,7 @@ function Home() {
         })
         .catch(err => console.log(err.message))
         setText('');
+        setSuggestionList([]);
         console.log(text);
         console.log(wordList)
     }

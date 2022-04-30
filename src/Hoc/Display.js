@@ -3,22 +3,24 @@ import {GiSpeaker} from 'react-icons/gi';
 
 function Display({wordList}) {
     
+    //play the sound
     let playSound = (url) => {
         new Audio(url).play()
     }
     
-    // const audio = wordList  && wordList[0].phonetics[0].audio
-    
-    
-    // console.log(audio)
   return (
     <div className="word-display">
     {
     wordList?.map((item,index) => (
         <div key={index}>
             <div className="top-info">
-                <h2>{item.word} </h2> 
-                <GiSpeaker className='speaker'  />
+                <h2>{item.word} </h2>
+                {
+                    item.phonetics.map((innerItem,index)=>(
+                        innerItem.audio &&  <GiSpeaker key={index} className='speaker' onClick={()=>playSound(`${innerItem.audio}`)} />
+                    ))
+                } 
+                
             </div>
             <span>{item.phonetic}</span>
             <div className="meaning">

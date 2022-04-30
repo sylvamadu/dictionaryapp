@@ -38,7 +38,7 @@
         width: 50%;
         border-radius: 3em;
         @include mobile-sm(){
-            width: 85%;
+            width: 90%;
         }
 
         input{
@@ -51,6 +51,7 @@
 
             @include mobile-sm(){
                 width: 70%;
+                padding-left: 2em!important;
             }
         }
 
@@ -83,7 +84,7 @@
         ul{
             
             li{
-                padding: 0 1em;
+                padding: .2em 1em;
                 list-style: none;
                 color: #111820;
                 font-size: 1em;
