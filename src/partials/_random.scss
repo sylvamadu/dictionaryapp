@@ -1,0 +1,25 @@
+@mixin mobile-md {
+    @media screen and (min-width:500px) and (max-width:768px){
+        @content;
+    }
+}
+@mixin mobile-sm {
+    @media screen and (min-width:150px) and (max-width:425px){
+        @content;
+    }
+}
+
+.random-page{
+    margin: 4em 0;
+    height: 50vh;
+    color: white;
+
+    .top{
+        h2{
+            color: orangered;
+        }
+        span{
+            color: gray;
+        }
+    }
+}

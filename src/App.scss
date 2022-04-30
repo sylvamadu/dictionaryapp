@@ -1,0 +1,27 @@
+@import './partials/reset';
+@import './partials/home';
+@import './partials/random';
+@import './partials/loader';
+
+$main-color: rgb(14, 13, 13);
+
+
+// @mixin mobile-md {
+//     @media screen and (min-width:500px) and (max-width:768px){
+//         @content;
+//     }
+// }
+// @mixin mobile-sm {
+//     @media screen and (min-width:150px) and (max-width:425px){
+//         @content;
+//     }
+// }
+
+.app{
+    background: $main-color;
+    // border: 2px solid green;
+    height: 100%;
+    width: 100%;
+    
+}
+
